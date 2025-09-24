@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "name": "expressjs-si52-2025-2026-lollyy28",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-lollyy28.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-lollyy28/issues"
+  },
+  "homepage": "https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-lollyy28#readme"
+}
