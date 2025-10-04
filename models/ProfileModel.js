@@ -26,3 +26,7 @@ const UserSchema = new mongoose.Schema(
         timestamps : true
     }
 )
+
+const ProfileModel = mongoose.Model("Profile", ProfileSchema)
+
+export default ProfileModel
