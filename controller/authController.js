@@ -1,4 +1,6 @@
 import UserModel from "../models/userModel.js";
+import { compare, hash } from "../utils/hashUtil.js";
+import { jwtSignUtil } from "../utils/jwtSignUtil.js";
 
 export const register = async (req, res) => {
     try {
@@ -50,9 +52,17 @@ export const login = async(req, res) => {
         }
 
         //membandingkan password yang ada di dalam db dengan request
-        if(user.password == loginData.password){
+        if(compare(loginData.password, user.password)) {
+            return res.status(200).json({
+                message : " Login Berhasil",
+                data : {
+                    username : user.username,
+                    email :user.email,
+                    token : jwtSignUtil(user) //Melakukan sign JWT token
+                }
+            })
         }
-    }catch (error){
+    }catch (e){
     res.status(500).json({
         message: e.message,
         data : null
