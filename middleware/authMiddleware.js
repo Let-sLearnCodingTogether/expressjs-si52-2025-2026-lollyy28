@@ -7,10 +7,10 @@ export const protect = (req,res, next) => {
             session: false,
     }, 
     (err, user, info) => {
-        if(ERR || !user) {
+        if(err || !user) {
             return res.status(401).json({
                 message: info ? info.message : "Unauthorized",
-                err: err.massage || "Tidak valid",
+                err: err || "Tidak valid",
             });
         }
 
