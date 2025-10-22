@@ -7,5 +7,5 @@ const api = express.Router()
 api.post('/register', authController.register)
 api.post('/login', authController.login)
 
-api.get('/me', profile)
+api.get('/me', profileController.privateProfile)
 export default api
